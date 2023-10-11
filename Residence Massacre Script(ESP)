@@ -1,4 +1,4 @@
--- -65.42, 7.82, -65.88
+--MADE BY shiawase10
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Robojini/Tuturial_UI_Library/main/UI_Template_1"))()
 local Window = Library.CreateLib("PATCHED BY shiawase10", "RJTheme3")
@@ -273,11 +273,14 @@ Section:NewButton("ESP", "SHOW PLAYER POSITION(NEW)", function()
     -- Fim do código do primeiro script
 end)
 
--- Função para criar um botão "REJOIN" na GUI
-Section:NewButton("RE-JOIN", "RE-JOIN IN THE ATUAL EXPERIENCE", function()
+Section:NewButton("REJOIN", "Reentrar na experiência atual", function()
     local ts = game:GetService("TeleportService")
     local p = game:GetService("Players").LocalPlayer
 
     ts:TeleportToPlaceInstance(game.PlaceId, game.JobId, p)
+end)
+
+Section:NewButton("INFINITE YIELD", "ACTIVE INFINITE YIELD NOT RECOMMENDED", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source", true))()
 end)
 
