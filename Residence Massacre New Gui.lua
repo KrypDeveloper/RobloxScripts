@@ -5,7 +5,7 @@ local Window = Rayfield:CreateWindow({
    LoadingTitle = "KillerxHub",
    LoadingSubtitle = "by shiwase10",
    ConfigurationSaving = {
-      Enabled = true,
+      Enabled = false,
       FolderName = KillerxHub, -- Create a custom folder for your hub/game
       FileName = "KH"
    },
@@ -37,8 +37,6 @@ if Character then
 end
    end,
 })
-
--- Continuação do seu script
 
 local Button2 = SAFE:CreateButton({
     Name = "SAFE 2",
@@ -308,4 +306,30 @@ local GhostButton = ExtrasTab:CreateButton({
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-18.40, 4.20, 31.50)
         end
     end,
+})
+
+local DestroyButton = ExtrasTab:CreateButton({
+   Name = "Destroy GUI",
+   Callback = function()
+   Rayfield:Destroy()
+			print("sucess")
+   end,
+})
+
+local KickButton = ExtrasTab:CreateButton({
+   Name = "Kick YourSelf",
+   Callback = function()
+   -- Capture o jogador que está executando o script
+local jogadorAlvo = game.Players.LocalPlayer
+
+-- Verifique se o jogador alvo existe
+if jogadorAlvo then
+    -- Expulse o jogador
+    jogadorAlvo:Kick("LOL")
+else
+    -- Se o jogador não for encontrado, exiba uma mensagem de erro
+    print("Jogador não encontrado.")
+end
+
+   end,
 })
