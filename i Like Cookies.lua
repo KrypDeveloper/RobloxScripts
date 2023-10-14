@@ -8,7 +8,7 @@ if placeId == expectedPlaceId1 then
         character:MoveTo(Vector3.new(-94.03, 4.80, 56.05))
     end
 elseif placeId == expectedPlaceId2 then
-    local success, result = pcall(loadstring(game:HttpGet("https://raw.githubusercontent.com/KrypDeveloper/RobloxScripts/main/Residence%20Massacre%20Script(ESP)", true)))
+    local success, result = pcall(loadstring(game:HttpGet("https://raw.githubusercontent.com/KrypDeveloper/RobloxScripts/main/Residence%20Massacre%20New%20Gui.lua", true)))
     if success then
         print("Sucess")
     else
