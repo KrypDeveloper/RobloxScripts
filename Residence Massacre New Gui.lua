@@ -333,3 +333,21 @@ end
 
    end,
 })
+
+local Button = ExtrasTab:CreateButton({
+   Name = "Teleport To Monster",
+   Callback = function()
+   local player = game.Players.LocalPlayer
+local workspace = game:GetService("Workspace")
+local mutant = workspace:FindFirstChild("Mutant")
+
+if mutant and player.Character then
+    local humanoid = player.Character:FindFirstChild("Humanoid")
+
+    if humanoid then
+        humanoid.Parent = mutant -- Define o Humanoid do jogador como filho do modelo "Mutant"
+    end
+end
+   end,
+})
+
