@@ -43,5 +43,7 @@ local Button = GUI:CreateButton({
    Name = "NEW GUI",
    Callback = function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/KrypDeveloper/RobloxScripts/main/Residence%20Massacre%20New%20Gui.lua",true))()
+         wait(0.1)
+         Rayfield:Destroy()
    end,
 })
