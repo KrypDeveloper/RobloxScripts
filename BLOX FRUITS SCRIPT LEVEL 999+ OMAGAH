@@ -1,4 +1,4 @@
-function OnGameLoad()
+
 	-- Create a ScreenGui named "ScriptMain" in StarterGui
 	local screenGui = Instance.new("ScreenGui", game.StarterGui)
 	screenGui.Name = "ScriptMain"
@@ -99,7 +99,3 @@ textButton.MouseButton1Click:Connect(toggleState)
 
 	-- Adjust the button text for easier access (optional)
 	autoChestButton.Text = "AutoChest"
-
-end
-
-game.Loaded:Connect(OnGameLoad)
