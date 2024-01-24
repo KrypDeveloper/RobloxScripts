@@ -1,6 +1,8 @@
+local Player = game.Players.LocalPlayer.Name
+
 
 	-- Create a ScreenGui named "ScriptMain" in StarterGui
-	local screenGui = Instance.new("ScreenGui", game.StarterGui)
+	local screenGui = Instance.new("ScreenGui", game.Players:FindFirstChild(Player).PlayerGui)
 	screenGui.Name = "ScriptMain"
 
 	-- Create a Frame named "FrameMain" within the ScreenGui
