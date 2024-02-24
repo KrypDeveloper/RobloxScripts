@@ -1,0 +1,58 @@
+local teleport_table = {
+    location1 = Vector3.new(-22, -10, 1253), -- your desired position
+    location2 = Vector3.new(-53, -10, 8732),  -- your desired position
+    location3 = Vector3.new(-68, 0, 9441)
+}
+
+local tween_s = game:GetService('TweenService')
+local tweeninfo = TweenInfo.new(22,Enum.EasingStyle.Linear)
+
+local lp = game.Players.LocalPlayer
+
+function bypass_teleport(v)
+    if lp.Character and 
+    lp.Character:FindFirstChild('HumanoidRootPart') then
+        local cf = CFrame.new(v)
+        local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
+        a:Play()
+    end
+end
+
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Frost Hub | Build a Boat", HidePremium = true, SaveConfig = false, ConfigFolder = "OrionTest"})
+
+OrionLib:MakeNotification({
+	Name = "Frost Hub",
+	Content = "Hello ".. game.Players.LocalPlayer.Name.. " How are you?",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+local Tab = Window:MakeTab({
+	Name = "Auto",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Auto Farm"
+})
+
+Tab:AddToggle({
+	Name = "Auto Farm",
+	Default = false,
+	Callback = function(autofarm)
+		
+while autofarm == true do
+game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(CFrame.new(-34.59843444824219, 88.7413101196289, 1300.95751953125))
+bypass_teleport(teleport_table.location1)
+bypass_teleport(teleport_table.location2)
+bypass_teleport(teleport_table.location3)
+wait(22)
+game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid").Health = 0
+wait(5)
+end
+	end    
+})
+
+OrionLib:Init()
