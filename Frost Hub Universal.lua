@@ -25,3 +25,4 @@ elseif game.PlaceId == 14896802601 then
 else
 print("você não esta em um jogo suportado\nYou are in a unsuported game")
 end
+--fique avontade para se inspirar
