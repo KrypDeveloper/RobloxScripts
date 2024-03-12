@@ -12,7 +12,7 @@ elseif game.PlaceId == 16129091908 then
   loadstring(game:HttpGet("https://raw.githubusercontent.com/KrypDeveloper/RobloxScripts/main/PT-BR%20FROST%20HUB.lua"))()
 elseif game.PlaceId == 5210095481 then
   loadstring(game:HttpGet("https://raw.githubusercontent.com/KrypDeveloper/RobloxScripts/main/PT-BR%20FROST%20HUB.lua"))()
-elseif game.PlaceId == 189707 then
+elseif game.PlaceId == "189707" then
   loadstring(game:HttpGet("https://raw.githubusercontent.com/KrypDeveloper/RobloxScripts/main/Frost%20Hub%20%7C%20Natural%20Disaster.lua"))()
 elseif game.PlaceId == 14437001043 then
   load("https://raw.githubusercontent.com/KrypDeveloper/RobloxScripts/main/Frost%20Hub%20Residence%20Massacre")
