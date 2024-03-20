@@ -38,3 +38,4 @@ for id, script in pairs(utility) do
   else
     print("unsupported game detected")
   end
+end
