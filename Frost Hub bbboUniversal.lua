@@ -1,4 +1,4 @@
-local function load(a)
+function load(a)
 loadstring(game:HttpGet(a))
 end
 
