@@ -2,7 +2,7 @@ function load(a)
 loadstring(game:HttpGet(a))
 end
 
-local BuildABoat = function()
+function BuildABoat()
 load("https://raw.githubusercontent.com/KrypDeveloper/RobloxScripts/main/frost%20hub%20build%20a%20boat(BETA)")
 end
 
