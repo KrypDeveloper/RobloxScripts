@@ -32,42 +32,61 @@ end
 
 if game.PlaceId == 537413528 then
   BuildABoat()
+    print("executed")
 elseif game.PlaceId == 16365412402 then
   omnix()
+    print("executed")
 elseif game.PlaceId == 16091658541 then
   omnix()
+    print("executed")
 elseif game.PlaceId == 16129091908 then
   omnix()
+    print("executed")
 elseif game.PlaceId == 5210095481 then
   omnix()
+    print("executed")
 elseif game.PlaceId == 189707 then
   loadstring(game:HttpGet("https://raw.githubusercontent.com/KrypDeveloper/RobloxScripts/main/Frost%20Hub%20%7C%20Natural%20Disaster.lua"))()
+    print("executed")
 elseif game.PlaceId == 14437001043 then
   Residence()
+    print("executed")
 elseif game.PlaceId == 16667550979 then
  Residence()
+    print("executed")
 elseif game.PlaceId == 14896802601 then
  Residence()
+    print("executed")
 elseif game.PlaceId == 14896802601 then
  Residence()
+    print("executed")
  elseif game.PlaceId == 155382109 then
  area51()
+    print("executed")
  elseif game.PlaceId == 3203685552 then
  bear()
+    print("executed")
  elseif game.PlaceId == 5441515225 then
  bear()
+    print("executed")
  elseif game.PlaceId == 4398834993 then
  bear()
+    print("executed")
  elseif game.PlaceId == 4565048785 then
  bear()
+    print("executed")
  elseif game.PlaceId == 13477040473 then
  bear()
+    print("executed")
  elseif game.PlaceId == 15985826131 then
  HomeAlone()
+    print("executed")
  elseif game.PlaceId == 6999691637 then
  BoxDown()
+    print("executed")
  elseif game.PlaceId == 10129750406 then
  stairs()
+    print("executed")
 else
 print("você não esta em um jogo suportado\nYou are in a unsuported game")
 end
