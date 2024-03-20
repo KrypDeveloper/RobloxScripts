@@ -42,7 +42,7 @@ elseif game.PlaceId == "14896802601" then
  elseif game.PlaceId == "155382109" then
   loadstring(game:HttpGet(links.area51))
     print("executed")
- elseif game.PlaceId == "3203685552" then
+ elseif game.PlaceId == 3203685552 then
   loadstring(game:HttpGet(links.bear))
     print("executed")
  elseif game.PlaceId == "5441515225" then
