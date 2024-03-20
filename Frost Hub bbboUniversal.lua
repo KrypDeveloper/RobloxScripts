@@ -9,63 +9,32 @@ local links = {
   stairs = "https://raw.githubusercontent.com/KrypDeveloper/RobloxScripts/main/FrostXOgeid%202000%20stairs"
 }
 
-if game.PlaceId == "537413528" then
-  loadstring(game:HttpGet(links.BuildABoat))
-    print("executed")
-elseif game.PlaceId == "16365412402" then
-  loadstring(game:HttpGet(links.omnix))
-    print("executed")
-elseif game.PlaceId == "16091658541" then
-  loadstring(game:HttpGet(links.omnix))
-    print("executed")
-elseif game.PlaceId == "16129091908" then
-  loadstring(game:HttpGet(links.omnix))
-    print("executed")
-elseif game.PlaceId == "5210095481" then
-  loadstring(game:HttpGet(links.omnix))
-    print("executed")
-elseif game.PlaceId == "189707" then
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/KrypDeveloper/RobloxScripts/main/Frost%20Hub%20%7C%20Natural%20Disaster.lua"))()
-    print("executed")
-elseif game.PlaceId == "14437001043" then
-  loadstring(game:HttpGet(links.Residence))
-    print("executed")
-elseif game.PlaceId == "16667550979" then
-  loadstring(game:HttpGet(links.Residence))
-    print("executed")
-elseif game.PlaceId == "14896802601" then
-  loadstring(game:HttpGet(links.Residence))
-    print("executed")
-elseif game.PlaceId == "14896802601" then
-  loadstring(game:HttpGet(links.Residence))
-    print("executed")
- elseif game.PlaceId == "155382109" then
-  loadstring(game:HttpGet(links.area51))
-    print("executed")
- elseif game.PlaceId == 3203685552 then
-  loadstring(game:HttpGet(links.bear))
-    print("executed")
- elseif game.PlaceId == "5441515225" then
-  loadstring(game:HttpGet(links.bear))
-    print("executed")
- elseif game.PlaceId == "4398834993" then
-  loadstring(game:HttpGet(links.bear))
-    print("executed")
- elseif game.PlaceId == "4565048785" then
-  loadstring(game:HttpGet(links.bear))
-    print("executed")
- elseif game.PlaceId == "13477040473" then
-  loadstring(game:HttpGet(links.bear))
-    print("executed")
- elseif game.PlaceId == "15985826131" then
- loadstring(game:HttpGet(links.HomeAlone))
-    print("executed")
- elseif game.PlaceId == "6999691637" then
- loadstring(game:HttpGet(links.BoxDown))
-    print("executed")
- elseif game.PlaceId == "10129750406" then
- loadstring(game:HttpGet(links.stairs))
-    print("executed")
-else
-print("você não esta em um jogo suportado\nYou are in a unsuported game")
-end
+local utility = {
+  [537413528] = loadstring(game:HttpGet(links.BuildABoat)),
+  [16365412402] = loadstring(game:HttpGet(links.omnix)),
+  [16091658541] = loadstring(game:HttpGet(links.omnix)),
+  [16129091908] = loadstring(game:HttpGet(links.omnix)),
+  [521009548] = loadstring(game:HttpGet(links.omnix)),
+  [189707] = loadstring(game:HttpGet("https://raw.githubusercontent.com/KrypDeveloper/RobloxScripts/main/Frost%20Hub%20%7C%20Natural%20Disaster.lua"))(),
+  [14437001043] = loadstring(game:HttpGet(links.Residence)),
+  [16667550979] = loadstring(game:HttpGet(links.Residence)),
+  [14896802601] = loadstring(game:HttpGet(links.Residence)),
+  [14896802601] = loadstring(game:HttpGet(links.Residence)),
+  [155382109] = loadstring(game:HttpGet(links.area51)),
+  [3203685552] = loadstring(game:HttpGet(links.bear)),
+  [5441515225] = loadstring(game:HttpGet(links.bear)),
+  [4398834993] = loadstring(game:HttpGet(links.bear)),
+  [4565048785] = loadstring(game:HttpGet(links.bear)),
+  [13477040473] = loadstring(game:HttpGet(links.bear)),
+  [15985826131] = loadstring(game:HttpGet(links.HomeAlone)),
+  [6999691637] = loadstring(game:HttpGet(links.BoxDown)),
+  [10129750406] = loadstring(game:HttpGet(links.stairs))
+}
+
+for id, script in pairs(utility) do
+  if game.PlaceId == id then
+    return script
+    break
+  else
+    print("unsupported game detected")
+  end
