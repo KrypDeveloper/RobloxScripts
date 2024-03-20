@@ -10,30 +10,30 @@ local links = {
 }
 
 local utility = {
-  [537413528] = loadstring(game:HttpGet(links.BuildABoat)),
-  [16365412402] = loadstring(game:HttpGet(links.omnix)),
-  [16091658541] = loadstring(game:HttpGet(links.omnix)),
-  [16129091908] = loadstring(game:HttpGet(links.omnix)),
-  [521009548] = loadstring(game:HttpGet(links.omnix)),
-  [189707] = loadstring(game:HttpGet("https://raw.githubusercontent.com/KrypDeveloper/RobloxScripts/main/Frost%20Hub%20%7C%20Natural%20Disaster.lua"))(),
-  [14437001043] = loadstring(game:HttpGet(links.Residence)),
-  [16667550979] = loadstring(game:HttpGet(links.Residence)),
-  [14896802601] = loadstring(game:HttpGet(links.Residence)),
-  [14896802601] = loadstring(game:HttpGet(links.Residence)),
-  [155382109] = loadstring(game:HttpGet(links.area51)),
-  [3203685552] = loadstring(game:HttpGet(links.bear)),
-  [5441515225] = loadstring(game:HttpGet(links.bear)),
-  [4398834993] = loadstring(game:HttpGet(links.bear)),
-  [4565048785] = loadstring(game:HttpGet(links.bear)),
-  [13477040473] = loadstring(game:HttpGet(links.bear)),
-  [15985826131] = loadstring(game:HttpGet(links.HomeAlone)),
-  [6999691637] = loadstring(game:HttpGet(links.BoxDown)),
-  [10129750406] = loadstring(game:HttpGet(links.stairs))
+  [537413528] = links.BuildABoat,
+  [16365412402] = links.omnix,
+  [16091658541] = links.omnix,
+  [16129091908] = links.omnix,
+  [521009548] = links.omnix,
+  [189707] = "https://raw.githubusercontent.com/KrypDeveloper/RobloxScripts/main/Frost%20Hub%20%7C%20Natural%20Disaster.lua",
+  [14437001043] = links.Residence,
+  [16667550979] = links.Residence,
+  [14896802601] = links.Residence,
+  [14896802601] = links.Residence,
+  [155382109] = links.area51,
+  [3203685552] = links.bear,
+  [5441515225] = links.bear,
+  [4398834993] = links.bear,
+  [4565048785] = links.bear,
+  [13477040473] = links.bear,
+  [15985826131] = links.HomeAlone,
+  [6999691637] = links.BoxDown,
+  [10129750406] = links.stairs
 }
 
 for id, script in pairs(utility) do
   if game.PlaceId == id then
-    return script
+    loadstring(game:HttpGet(utility[game.PlaceId]))()
     break
   else
     print("unsupported game detected")
