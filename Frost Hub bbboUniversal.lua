@@ -3,7 +3,7 @@ local links = {
   omnix = "https://raw.githubusercontent.com/KrypDeveloper/RobloxScripts/main/PT-BR%20FROST%20HUB.lua",
   Residence = "https://raw.githubusercontent.com/KrypDeveloper/RobloxScripts/main/Frost%20Hub%20Residence%20Massacre",
   area51 = "https://raw.githubusercontent.com/KrypDeveloper/RobloxScripts/main/FrostXOgeid%20Area51.lua",
-  bear = "https://raw.githubusercontent.com/KrypDeveloper/RobloxScripts/main/FrostXOGEID%20BEAR",
+  bear = "https://raw.githubusercontent.com/KrypDeveloper/RobloxScripts/main/Build%20A%20Boat%20ogeidxforst",
   HomeAlone = "https://raw.githubusercontent.com/KrypDeveloper/RobloxScripts/main/FrostXOgeid%20Home%20Alone.lua",
   BoxDown = "https://raw.githubusercontent.com/KrypDeveloper/RobloxScripts/main/FrostXOgeid%20BoxDown",
   stairs = "https://raw.githubusercontent.com/KrypDeveloper/RobloxScripts/main/FrostXOgeid%202000%20stairs"
@@ -37,10 +37,11 @@ local utility = {
 
 for id, script in pairs(utility) do
   if game.PlaceId == id then
-    loadstring(game:HttpGet(utility[game.PlaceId]))()
-    break
-  else
-    print("unsupported game detected")
-    break
+    loadstring(game:HttpGet(script))()
+    return -- Exiting after executing the script
   end
 end
+
+-- If no supported game was detected
+print("Unsupported game detected")
+
