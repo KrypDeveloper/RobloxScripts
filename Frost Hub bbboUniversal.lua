@@ -41,5 +41,6 @@ for id, script in pairs(utility) do
     break
   else
     print("unsupported game detected")
+    break
   end
 end
