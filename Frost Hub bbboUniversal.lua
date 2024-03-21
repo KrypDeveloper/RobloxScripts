@@ -30,6 +30,7 @@ local utility = {
   [4565048785] = links.bear,
   [13477040473] = links.bear,
   [15985826131] = links.HomeAlone,
+  [15988754129] = links.HomeAlone,
   [6999691637] = links.BoxDown,
   [10129750406] = links.stairs
 }
