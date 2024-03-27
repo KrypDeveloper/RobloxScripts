@@ -32,71 +32,26 @@ local default = {
 
 Hacks:OnChanged(function(Value)
     local char=game.Players.LocalPlayer.Character;humanoid=char:FindFirstChildOfClass("Humanoid") or char:FindFirstChild("Humanoid")
-  if Value == "Speed Hack" then
-    if humanoid.WalkSpeed==150 then
-        humanoid.WalkSpeed=default.Speed
-    else
-        humanoid.WalkSpeed=150
+    if Value == "Speed Hack" then
+        if humanoid.WalkSpeed==150 then
+            humanoid.WalkSpeed=default.Speed
+        else
+            humanoid.WalkSpeed=150
+        end
+    elseif Value == "Jump Hack" then
+        if humanoid.JumpPower == 300 then
+            humanoid.JumpPower = default.Jump
+        else
+            humanoid.JumpPower = 300
+        end
+    elseif Value == "Invisible Hack" then
+        for _,obj in pairs(char:GetDescendants()) do
+            if obj:IsA("Part") or obj:IsA("MeshPart") then
+                obj.Transparency = 1
+            end
+        end
     end
-  
-
-elseif Value == "Jump Hack" then
-    if humanoid.JumpPower == 300 then
-        humanoid.JumpPower = default.Jump
-    else
-        humanoid.JumpPower = 300
-    end
-
-elseif Value == "Invisible Hack" then
-    for _,obj in pairs(character:GetDescendants()) do
-       if obj:IsA("Part") or obj:IsA("MeshPart") then
-        obj.Transparency = 1
-        print("O Objeto: ".. obj.. " Ficou invisivel Visualmente")
-       end
-    end
-elseif Value == "Noclip" then
-    for _,obj in pairs(character:GetDescendants()) do
-        if obj:IsA("Part") or obj:IsA("MeshPart") then
-        
-    if obj.CanCollide == false then
-        obj.CanCollide = true
-    else
-        obj.CanCollide = false
-    end
-    end
-end
-end
 end)
-
-function import(ferramenta)
-  if ferramenta == "IY" then
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-  elseif ferramenta == "Owl" then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))()
-  elseif ferramenta == "Dex" then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/AlterX404/DarkDEX-V5/main/DarkDEX-V5"))()
-  else
-    loadstring(game:HttpGet(ferramenta))
-  end
-end
-
-local ferramentas = {
-    IY = function()
-        import("IY")
-    end, 
-    
-    Owl= function()
-    import("Owl")
-    end,
-
-    Dex=function()
-    import("Dex")
-    end,
-
-    others=function()
-        return nil
-    end
-}
 
 local services = Tabs.Main:AddDropdown("Dropdown", {
     Title = "Ferramentas Uteis",
@@ -107,13 +62,11 @@ local services = Tabs.Main:AddDropdown("Dropdown", {
 
 services:OnChanged(function(Value)
     if Value == "Infinite Yield" then
-        ferramentas.IY()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
     elseif Value == "Owl Hub" then
-        ferramentas.Owl()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))()
     elseif Value == "Dex Explorer" then
-        ferramentas.Dex()
-    else
-        ferramentas.others()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/AlterX404/DarkDEX-V5/main/DarkDEX-V5"))()
     end
 end)
 
