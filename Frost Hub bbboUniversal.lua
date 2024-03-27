@@ -41,13 +41,16 @@ local utility = {
 }
 
 for id, script in pairs(utility) do
+if _G.ativo = false theb
   if game.PlaceId == id then
     loadstring(game:HttpGet(script))()
     break
   else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/KrypDeveloper/RobloxScripts/main/OgeidXFrost%20OUTROS.lua"))()
+    _G.ativo = true
     print("Game sem suporte detectado, carregando universal")
     break
   end
+end
 end
 
