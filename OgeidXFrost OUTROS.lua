@@ -2,20 +2,10 @@ local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/KrypDe
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 
-local Window = Fluent:CreateWindow({
-    Title = "FrostXOgeid | ".. game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name,
-    SubTitle = "Quick Hacks por Frost Team",
-    TabWidth = 160,
-    Size = UDim2.fromOffset(580, 460),
-    Acrylic = true,
-    Theme = "Dark",
-    MinimizeKey = Enum.KeyCode.LeftControl
-})
+local Window = Fluent:CreateWindow({Title = "FrostXOgeid | ".. game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name, SubTitle = "Quick Hacks por Frost Team", TabWidth = 160, Size = UDim2.fromOffset(580, 460), Acrylic = true, Theme = "Dark", MinimizeKey = Enum.KeyCode.LeftControl})
 
-local Tabs = {
-    Main = Window:AddTab({Title="Main",Icon="rbxassetid://16452461868"}),
-    Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
-}
+local Tabs = {Main=Window:AddTab({Title="Main",Icon="rbxassetid://16452461868"}), 
+    Settings=Window:AddTab({ Title = "Settings", Icon = "settings" })}
 
 local Hacks=Tabs.Main:AddDropdown("MultiDropdown", {
     Title = "Hacks",
