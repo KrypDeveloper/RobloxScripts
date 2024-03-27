@@ -7,41 +7,25 @@ local Window = Fluent:CreateWindow({Title = "FrostXOgeid | ".. game:GetService("
 local Tabs = {Main=Window:AddTab({Title="Main",Icon="rbxassetid://16452461868"}), 
     Settings=Window:AddTab({ Title = "Settings", Icon = "settings" })}
 
-local Hacks=Tabs.Main:AddDropdown("MultiDropdown", {
-    Title = "Hacks",
-    Description = "Varias Hacks uteis",
-    Values = {"Nenhum", "Speed Hack", "Jump Hack", "Invisible Hack", "Noclip"},
-    Multi = false,
-    Default = {"Nenhum"},
-})
+    local Hacks = Tabs.Main:AddDropdown("Hacks", {
+        Title = "Hacks",
+        Values = {"Nenhum", "Speed Hack", "Jump Hack", "Noclip"},
+        Multi = false,
+        Default = "Nenhum",
+    })
 
-local default = {
-    Speed=game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid").WalkSpeed,
-    Jump=game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid").JumpPower
-}
-
-Hacks:OnChanged(function(Value)
-    local char=game.Players.LocalPlayer.Character;humanoid=char:FindFirstChildOfClass("Humanoid") or char:FindFirstChild("Humanoid")
-    if Value == "Speed Hack" then
-        if humanoid.WalkSpeed==150 then
-            humanoid.WalkSpeed=default.Speed
-        else
-            humanoid.WalkSpeed=150
-        end
-    elseif Value == "Jump Hack" then
-        if humanoid.JumpPower == 300 then
-            humanoid.JumpPower = default.Jump
-        else
+    Hacks:OnChanged(function(Value)
+        local humanoid = game.Players.LocalPlayer.Character:WaitForChild("Humanoid")
+        if Value == "Speed Hack" then
+            humanoid.WalkSpeed = 300
+        elseif Value == "Jump Hack" then
             humanoid.JumpPower = 300
-        end
-    elseif Value == "Invisible Hack" then
-        for _,obj in pairs(char:GetDescendants()) do
-            if obj:IsA("Part") or obj:IsA("MeshPart") then
-                obj.Transparency = 1
+        elseif Value == "Noclip" then
+            for _, obj in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+                obj.CanCollide = false
             end
         end
-    end
-end)
+    end)
 
 local services = Tabs.Main:AddDropdown("Dropdown", {
     Title = "Ferramentas Uteis",
@@ -71,8 +55,6 @@ Tabs.Main:AddButton({
                 {
                     Title = "Confirmar",
                     Callback = function()
-
-
                         Fluent:Notify({
                             Title = "OgeidXFrost",
                             Content = "Aquarde",
@@ -80,8 +62,8 @@ Tabs.Main:AddButton({
                             Duration = 5 -- Set to nil to make the notification not disappear
                         }) 
                         for _, obj in pairs(game.Workspace:GetDescendants()) do
-                        obj:Destroy()
-                        wait(1)
+                            obj:Destroy()
+                            wait(1)
                         end
                     end
                 },
@@ -151,9 +133,5 @@ Fluent:Notify({
     Content = "Carregado",
     Duration = 8
 })
-
-
-
-
 
 SaveManager:LoadAutoloadConfig()
