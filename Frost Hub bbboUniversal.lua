@@ -1,3 +1,13 @@
+--[[
+ #####    #####   #######   ######  ######   ### ###  #######  ######    #####    #####   ######## 
+### ###  ##   ##   ##  ##     ##     ## ###   ## ##    ##  ##   ##  ##  ### ###  ##   ##  ## ## ## 
+##   ##  ##        ##         ##     ##  ##   ## ##    ##       ##  ##  ##   ##  ##          ##    
+##   ##  ##  ###   ####       ##     ##  ##    ###     ####     #####   ##   ##   #####      ##    
+##   ##  ##   ##   ##         ##     ##  ##   ## ##    ##       ##  ##  ##   ##       ##     ##    
+### ###  ##   ##   ##  ##     ##     ## ###   ## ##    ##       ##  ##  ### ###  ##   ##     ##    
+ #####    #####   #######   ######  ######   ### ###  ####     #### ###  #####    #####     ####   
+]]
+
 local links = {
   BuildABoat = "https://raw.githubusercontent.com/KrypDeveloper/RobloxScripts/main/Build%20A%20Boat%20ogeidxforst",
   omnix = "https://raw.githubusercontent.com/KrypDeveloper/RobloxScripts/main/PT-BR%20FROST%20HUB.lua",
@@ -43,7 +53,7 @@ local utility = {
 for id, script in pairs(utility) do
   if game.PlaceId == id then
     loadstring(game:HttpGet(script))()
-    return
+    break
   end
 end
 
