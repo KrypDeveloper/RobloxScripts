@@ -10,7 +10,7 @@
 
 local links = {
   BuildABoat = "https://raw.githubusercontent.com/KrypDeveloper/RobloxScripts/main/Build%20A%20Boat%20ogeidxforst",
-  omnix = "https://raw.githubusercontent.com/KrypDeveloper/RobloxScripts/main/OgeidXFrost%20OMNI%20X.lua",
+  omnix = "https://raw.githubusercontent.com/KrypDeveloper/RobloxScripts/main/OgeidXFrost%20OMNI%20X%20v3.lua",
   Residence = "https://raw.githubusercontent.com/KrypDeveloper/RobloxScripts/main/Frost%20Hub%20Residence%20Massacre",
   area51 = "https://raw.githubusercontent.com/KrypDeveloper/RobloxScripts/main/FrostXOgeid%20Area51.lua",
   bear = "https://raw.githubusercontent.com/KrypDeveloper/RobloxScripts/main/FrostXOGEID%20BEAR",
