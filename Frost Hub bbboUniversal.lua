@@ -49,11 +49,17 @@ local utility = {
   [6999691637] = links.BoxDown,
   [10129750406] = links.stairs
 }
-
+local function check()
 for id, script in pairs(utility) do
   if game.PlaceId == id then
-    loadstring(game:HttpGet(script))()
+    return true
     break
   end
 end
+end
 
+if check() then
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/KrypDeveloper/Quasar/main/src/manager.lua"))()
+else
+ kick("outdate or unsupported")
+end
