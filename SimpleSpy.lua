@@ -1952,6 +1952,7 @@ end
 
 --- Handles remote logs
 function remoteHandler(hookfunction, methodName, remote, args, funcInfo, calling, returnValue)
+if not _G.BlockLogList[remote.Name]
 	local validInstance, validClass = pcall(function()
 		return remote:IsA("RemoteEvent") or remote:IsA("RemoteFunction")
 	end)
