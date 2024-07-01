@@ -19,14 +19,6 @@ local function ATBL(remote)
     table.insert(_G.BlockLogList,remote)
 end
 
-local function GetRemoteFromBlockLogList(remote)
-    if _G.BlockLogList[remote] then
-        return true
-    else
-        return true
-    end
-end
-
 local Players = game:GetService("Players")
 local CoreGui = game:GetService("CoreGui")
 local Highlight =
@@ -1247,7 +1239,7 @@ end
 --- @param function_info string
 --- @param blocked any
 function newRemote(type, name, args, remote, function_info, blocked, src, returnValue)
-    if not _G.BlockLogList[remote] then
+    if not _G.BlockLogList[name] then
 	local remoteFrame = RemoteTemplate:Clone()
 	remoteFrame.Text.Text = string.sub(name, 1, 50)
 	remoteFrame.ColorBar.BackgroundColor3 = type == "event" and Color3.new(255, 242, 0) or Color3.fromRGB(99, 86, 245)
@@ -2609,5 +2601,5 @@ end)
 newButton("BlacklistLog", function()
 	return "Blacklist Current Remote from logs"
 end, function()
-	ATBL(selected.Remote.remote)
+	ATBL(selected.Name)
 end)
