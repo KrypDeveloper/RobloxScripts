@@ -2589,3 +2589,9 @@ end, function()
 		codebox:setRaw(SimpleSpy:ValueToVar(selected.ReturnValue, "returnValue"))
 	end
 end)
+
+newButton("Test", function()
+	return "Test."
+end, function()
+	print("Test")
+end)
