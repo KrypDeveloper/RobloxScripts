@@ -7,10 +7,24 @@
         exx - basically everything
         Frosty - GUI to Lua
 ]]
-
+if not _G.BlockLogList then
+    _G.BlockLogList = {}
+end
 -- shuts down the previous instance of SimpleSpy
 if _G.SimpleSpyExecuted and type(_G.SimpleSpyShutdown) == "function" then
 	print(pcall(_G.SimpleSpyShutdown))
+end
+
+local function ATBL(remote)
+    table.insert(_G.BlockLogList,remote)
+end
+
+local function GetRemoteFromBlockLogList(remote)
+    if _G.BlockLogList[remote] then
+        return true
+    else
+        return true
+    end
 end
 
 local Players = game:GetService("Players")
@@ -1233,6 +1247,7 @@ end
 --- @param function_info string
 --- @param blocked any
 function newRemote(type, name, args, remote, function_info, blocked, src, returnValue)
+    if not GetRemoteFromBlockLogList(remote) then
 	local remoteFrame = RemoteTemplate:Clone()
 	remoteFrame.Text.Text = string.sub(name, 1, 50)
 	remoteFrame.ColorBar.BackgroundColor3 = type == "event" and Color3.new(255, 242, 0) or Color3.fromRGB(99, 86, 245)
@@ -1271,6 +1286,7 @@ function newRemote(type, name, args, remote, function_info, blocked, src, return
 	table.insert(remoteLogs, 1, { connect, remoteFrame })
 	clean()
 	updateRemoteCanvas()
+	end
 end
 
 --- Generates a script from the provided arguments (first has to be remote path)
@@ -2590,8 +2606,8 @@ end, function()
 	end
 end)
 
-newButton("Test", function()
-	return "Test."
+newButton("BlacklistLog", function()
+	return "Blacklist Current Remote from logs"
 end, function()
-	print("Test")
+	ATBL(selected.Remote.remote)
 end)
