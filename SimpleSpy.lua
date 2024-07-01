@@ -1247,7 +1247,7 @@ end
 --- @param function_info string
 --- @param blocked any
 function newRemote(type, name, args, remote, function_info, blocked, src, returnValue)
-    if not GetRemoteFromBlockLogList(remote) then
+    if not _G.BlockLogList[remote] then
 	local remoteFrame = RemoteTemplate:Clone()
 	remoteFrame.Text.Text = string.sub(name, 1, 50)
 	remoteFrame.ColorBar.BackgroundColor3 = type == "event" and Color3.new(255, 242, 0) or Color3.fromRGB(99, 86, 245)
