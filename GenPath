@@ -1,0 +1,59 @@
+local f = Instance.new("Folder",workspace)
+f.Name = "LobbyParts"
+
+local Steve1 = Instance.new("Part")
+Steve1.Parent = workspace.LobbyParts
+Steve1.Anchored = true
+Steve1.Transparency = 1
+Steve1.CanCollide = true
+Steve1.Size = Vector3.new(106.49999237060547, 1, 3.989999771118164)
+Steve1.Position = Vector3.new(261.1600036621094, 0.3399730920791626, -10.404997825622559)
+
+local Steve2 = Instance.new("Part")
+Steve2.Parent = workspace.LobbyParts
+Steve2.Anchored = true
+Steve2.Transparency = 1
+Steve2.CanCollide = true
+Steve2.Size = Vector3.new(4.949993133544922, 1, 3.589998722076416)
+Steve2.Position = Vector3.new(314.4150390625, 0.3399730920791626, -19.755001068115234)
+
+local Steve3 = Instance.new("Part")
+Steve3.Parent = workspace.LobbyParts
+Steve3.Anchored = true
+Steve3.Transparency = 1
+Steve3.CanCollide = true
+Steve3.Size = Vector3.new(4.189999580383301, 1, 15.34999942779541)
+Steve3.Position = Vector3.new(206.61500549316406, 0.3399730920791626, -15.854997634887695)
+
+local Steve4 = Instance.new("Part")
+Steve4.Parent = workspace.LobbyParts
+Steve4.Anchored = true
+Steve4.Transparency = 1
+Steve4.CanCollide = true
+Steve4.Size = Vector3.new(2.449993133544922, 1, 8.349998474121094)
+Steve4.Position = Vector3.new(313.1650390625, 0.3399730920791626, -17.375)
+
+local Steve5 = Instance.new("Part")
+Steve5.Parent = workspace.LobbyParts
+Steve5.Anchored = true
+Steve5.Transparency = 1
+Steve5.CanCollide = true
+Steve5.Size = Vector3.new(39.43000030517578, 1, 3.989999771118164)
+Steve5.Position = Vector3.new(189.03500366210938, 0.3399730920791626, -21.534997940063477)
+
+local Steve6 = Instance.new("Part")
+Steve6.Parent = workspace.LobbyParts
+Steve6.Anchored = true
+Steve6.Transparency = 1
+Steve6.CanCollide = true
+Steve6.Size = Vector3.new(2.449993133544922, 1, 11.35999870300293)
+Steve6.Position = Vector3.new(319.2450256347656, 0.3399730920791626, -23.339998245239258)
+
+local SteveS7 = Instance.new("Part")
+SteveS7.Parent = workspace.LobbyParts
+SteveS7.Anchored = true
+SteveS7.Transparency = 1
+SteveS7.CanCollide = true
+SteveS7.Size = Vector3.new(2.449993133544922, 1, 85.95999908447266)
+SteveS7.Position = Vector3.new(364.1518249511719, 12.236862182617188, -27.784997940063477)
+SteveS7.CFrame = CFrame.new(364.151825, 12.2368622, -27.7849979, 0, -0.258819073, 0.965925932, 0, 0.965925932, 0.258819073, -1, 0, 0)
